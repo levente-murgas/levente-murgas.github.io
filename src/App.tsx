@@ -1,5 +1,6 @@
 import { Timeline } from '@/components/ui/timeline';
 import { Header } from '@/components/ui/header';
+import { Lens } from '@/components/ui/lens';
 
 const navLinks = [
   { label: 'Yearly Trends', href: '#checkpoint-0' },
@@ -18,11 +19,13 @@ const timelineData = [
           Year-over-year crime trajectory reveals shifting patterns across major categories from 2020 to 2025.
         </p>
         <div className="rounded-xl overflow-hidden border border-[#333] bg-[#1F1F1F] shadow-[0_0_30px_rgba(63,120,254,0.05)]">
-          <img
-            src="/images/yearly_crime_trends.svg"
-            alt="Yearly Crime Trends"
-            className="w-full h-auto"
-          />
+          <Lens zoomFactor={2.5} lensSize={180}>
+            <img
+              src="/images/yearly_crime_trends.svg"
+              alt="Yearly Crime Trends"
+              className="w-full h-auto"
+            />
+          </Lens>
         </div>
       </div>
     ),
@@ -35,11 +38,13 @@ const timelineData = [
           Crime activity peaks in late evening hours and drops sharply in early morning — a clear diurnal rhythm.
         </p>
         <div className="rounded-xl overflow-hidden border border-[#333] bg-[#1F1F1F] shadow-[0_0_30px_rgba(63,120,254,0.05)]">
-          <img
-            src="/images/hourly_crime_trends.svg"
-            alt="Hourly Crime Trends"
-            className="w-full h-auto"
-          />
+          <Lens zoomFactor={2.5} lensSize={180}>
+            <img
+              src="/images/hourly_crime_trends.svg"
+              alt="Hourly Crime Trends"
+              className="w-full h-auto"
+            />
+          </Lens>
         </div>
       </div>
     ),
@@ -52,11 +57,13 @@ const timelineData = [
           Relative change per crime category highlights which offenses are surging and which are declining.
         </p>
         <div className="rounded-xl overflow-hidden border border-[#333] bg-[#1F1F1F] shadow-[0_0_30px_rgba(63,120,254,0.05)]">
-          <img
-            src="/images/relative_change_per_category.svg"
-            alt="Relative Change Per Category"
-            className="w-full h-auto"
-          />
+          <Lens zoomFactor={2.5} lensSize={180}>
+            <img
+              src="/images/relative_change_per_category.svg"
+              alt="Relative Change Per Category"
+              className="w-full h-auto"
+            />
+          </Lens>
         </div>
       </div>
     ),
