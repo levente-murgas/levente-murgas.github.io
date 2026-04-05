@@ -42,10 +42,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           Crime in San Francisco
         </h2>
         <p className="text-[#A0A0A0] text-sm md:text-base max-w-2xl">
-          This study uses publicly available data from the San Francisco Police Department incident dataset, which spans from 2003 to 2026. The dataset provides detailed information on reported crimes, including their geographic location, time of occurrence, and classification. The dataset was restricted to the period 2003 to 2025 in order to avoid distortions from incomplete 2026 records.
+          This study uses publicly available data from the San Francisco Police Department incident dataset, which spans from 2003 to 2026. The dataset provides detailed information on reported crimes, including their geographic location, time of occurrence, and classification, allowing us to analyze spatial and temporal patterns of crime across the city. The dataset used in this study was constructed by merging two separate incomplete datasets, ensuring a continuous record across the full time period. However, because the 2026 records were still incomplete at the time of analysis, the dataset was restricted to the period 2003 to 2025 in order to avoid distortions in the results.
         </p>
         <p className="text-[#A0A0A0] text-sm md:text-base max-w-2xl mt-3">
-          To focus the analysis, we selected the eight crime categories with the highest number of reported incidents: drug offenses, assault, robbery, larceny theft, burglary, motor vehicle theft, vandalism, and arson.
+          To focus the analysis, we selected the eight crime categories with the highest number of reported incidents: drug offenses, assault, robbery, larceny theft, burglary, motor vehicle theft, vandalism, and arson. This selection allows for a deeper examination of the most prevalent types of crime while maintaining a representative view of overall criminal activity.
         </p>
       </div>
 
