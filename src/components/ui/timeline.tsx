@@ -39,13 +39,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl font-bold">
-          Crime in San Francisco
+          Netflix Catalog Analysis
         </h2>
         <p className="text-[#A0A0A0] text-sm md:text-base max-w-2xl">
-          This study uses publicly available data from the San Francisco Police Department incident dataset, which spans from 2003 to 2026. The dataset provides detailed information on reported crimes, including their geographic location, time of occurrence, and classification, allowing us to analyze spatial and temporal patterns of crime across the city. The dataset used in this study was constructed by merging two separate incomplete datasets, ensuring a continuous record across the full time period. However, because the 2026 records were still incomplete at the time of analysis, the dataset was restricted to the period 2003 to 2025 in order to avoid distortions in the results.
+          This analysis looks at how Netflix's catalog grew from a US-centric movie service into a global content platform. The dataset covers 8,807 titles, movies and TV shows, with metadata from The Movie Database (TMDB) covering ratings, popularity, country of origin, and genre.
         </p>
         <p className="text-[#A0A0A0] text-sm md:text-base max-w-2xl mt-3">
-          To focus the analysis, we selected the eight crime categories with the highest number of reported incidents: drug offenses, assault, robbery, larceny theft, burglary, motor vehicle theft, vandalism, and arson. This selection allows for a deeper examination of the most prevalent types of crime while maintaining a representative view of overall criminal activity.
+          Financial data turned out to be too sparse to work with, so the focus shifted to the cultural side: when did Netflix go global, what kinds of content it pushed, and where in the world it found its audience.
         </p>
       </div>
 
@@ -60,13 +60,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-[#191919] flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-[#2A2A2A] border border-[#444] p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-[#3F78FE]">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-[#E50914]">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-[#3F78FE]">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-[#E50914]">
                 {item.title}
               </h3>
               {item.content}
@@ -84,7 +84,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-[#3F78FE] via-[#6BA3FF] to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-[#E50914] via-[#FF4D57] to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>
