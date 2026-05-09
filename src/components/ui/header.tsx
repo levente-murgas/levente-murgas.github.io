@@ -55,12 +55,8 @@ export function Header({ links }: { links: NavLink[] }) {
         )}
       >
         <a href="#" className="flex items-center gap-2 text-white font-bold text-lg tracking-tight">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#3F78FE" strokeWidth="2" className="h-6 w-6">
-            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-            <path d="M2 17l10 5 10-5" />
-            <path d="M2 12l10 5 10-5" />
-          </svg>
-          <span>SF Crime Analysis</span>
+          <img src="/Netflix_2016_N_logo.svg" alt="Netflix N logo" className="h-7 w-auto" />
+          <span>Netflix Catalog Analysis</span>
         </a>
 
         <div className="hidden items-center gap-1 md:flex">
@@ -69,7 +65,7 @@ export function Header({ links }: { links: NavLink[] }) {
               key={i}
               className={cn(
                 buttonVariants({ variant: 'ghost', size: 'sm' }),
-                'text-[#A0A0A0] hover:text-white hover:bg-[#3F78FE]/10 cursor-pointer'
+                'text-[#A0A0A0] hover:text-white hover:bg-[#E50914]/10 cursor-pointer'
               )}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
@@ -83,7 +79,7 @@ export function Header({ links }: { links: NavLink[] }) {
           size="icon"
           variant="outline"
           onClick={() => setOpen(!open)}
-          className="md:hidden border-[#444] text-white hover:bg-[#3F78FE]/10"
+          className="md:hidden border-[#444] text-white hover:bg-[#E50914]/10"
         >
           <MenuToggleIcon open={open} className="size-5" duration={300} />
         </Button>
@@ -105,7 +101,7 @@ export function Header({ links }: { links: NavLink[] }) {
                     variant: 'ghost',
                     className: 'justify-start',
                   }),
-                  'text-[#A0A0A0] hover:text-white hover:bg-[#3F78FE]/10 cursor-pointer'
+                  'text-[#A0A0A0] hover:text-white hover:bg-[#E50914]/10 cursor-pointer'
                 )}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
