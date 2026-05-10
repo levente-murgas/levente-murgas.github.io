@@ -3,6 +3,7 @@ import { Header } from '@/components/ui/header';
 
 const navLinks = [
   { label: 'The Explosion', href: '#checkpoint-0' },
+  { label: 'The Maturity Bet', href: '#checkpoint-1' },
 ];
 
 const RefLink = ({ n, href }: { n: number; href: string }) => (
@@ -43,6 +44,48 @@ const timelineData = [
         </p>
         <p className="text-[#A0A0A0] text-sm md:text-base font-normal">
           The golden milestone markers point to the decisions that shaped the growth curve: the debut of original content in 2013 with <em>House of Cards</em>, the global expansion in 2016, the launch of Netflix Animation in 2018, and the move into gaming in 2021. Each one changed what kind of company Netflix was becoming, moving from distributor to studio to something closer to a full entertainment platform.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: 'The Maturity Bet',
+    content: (
+      <div>
+        <p className="text-[#A0A0A0] text-sm md:text-base font-normal mb-4">
+          As Netflix's catalog grew, so did its tilt toward adult content. This chart tracks how the rating mix changed year by year from 2016 to 2021, split between Movies and TV Shows. Use the buttons above the chart to switch between the two.
+        </p>
+        <div className="rounded-xl overflow-hidden border border-[#333] bg-[#1F1F1F] shadow-[0_0_30px_rgba(229,9,20,0.05)] mb-6">
+          <iframe
+            src="/visualizations/figure3_maturity.html"
+            title="The Maturity Bet: Netflix Content Rating Distribution"
+            className="w-full border-0"
+            style={{ height: '640px' }}
+          />
+        </div>
+
+        <h4 className="text-white text-sm md:text-lg font-semibold mt-2 mb-3">How the tiers work</h4>
+        <p className="text-[#A0A0A0] text-sm md:text-base font-normal mb-4">
+          Netflix's raw catalog uses two parallel rating systems: the MPAA system (G, PG, PG-13, R, NC-17) for Movies and the TV Parental Guidelines (TV-Y, TV-Y7, TV-PG, TV-14, TV-MA) for TV Shows. To put them on the same chart, both systems are merged into five tiers: <strong className="text-white">Kids</strong> (G, TV-Y, TV-Y7, TV-Y7-FV), <strong className="text-white">Family</strong> (PG, TV-PG), <strong className="text-white">Teens</strong> (PG-13, TV-14), <strong className="text-white">Mature</strong> (R, TV-MA, NC-17), and <strong className="text-white">Unrated</strong> (NR, UR, or anything unrecognized). Each title goes into exactly one tier, and shares are calculated as a percentage of all titles added that year for each content type, so every year adds up to 100%.
+        </p>
+
+        <h4 className="text-white text-sm md:text-lg font-semibold mt-6 mb-3">What the data shows</h4>
+        <p className="text-[#A0A0A0] text-sm md:text-base font-normal mb-4">
+          <strong className="text-white">Movies</strong> leaned toward mature audiences from the start. The main shift within Movies is the Teens tier (PG-13 / TV-14), which grows from around 18% in 2016 to nearly 35% by 2021. The Mature share stays dominant but edges down slightly over the same period.
+        </p>
+        <p className="text-[#A0A0A0] text-sm md:text-base font-normal mb-4">
+          <strong className="text-white">TV Shows</strong> started with a more balanced spread across tiers, but the Mature category grew steadily. Kids and Family programming dropped as a share of new TV shows, while Mature titles took up more of the total. The shift was gradual rather than a sharp pivot in any single year.
+        </p>
+        <p className="text-[#A0A0A0] text-sm md:text-base font-normal mb-4">
+          Looking at both types together, the declining share of Kids and Family content is consistent across Movies and TV Shows. That points to a broad move toward adult-focused programming rather than something specific to one format.
+        </p>
+
+        <h4 className="text-white text-sm md:text-lg font-semibold mt-6 mb-3">A note on the ratings</h4>
+        <p className="text-[#A0A0A0] text-sm md:text-base font-normal mb-4">
+          Netflix rates its own titles rather than going through an independent body. The MPAA and TV Parental Guidelines provide a framework, but Netflix originals may carry ratings that reflect marketing priorities as much as actual content. Netflix ramped up original production significantly after 2016, and because originals tend to target adult subscribers, they likely push the Mature share upward.
+        </p>
+        <p className="text-[#A0A0A0] text-sm md:text-base font-normal">
+          The chart shows what changed in the composition, not why it changed. The data can't distinguish between subscriber demand, competitive pressure from other streamers, content costs, or deliberate strategy. Probably some mix of all of those.
         </p>
       </div>
     ),
