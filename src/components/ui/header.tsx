@@ -74,7 +74,7 @@ export function Header({ links }: { links: NavLink[] }) {
             </a>
           ))}
           <a
-            href="https://github.com/levente-murgas/levente-murgas.github.io/blob/main/eda.ipynb"
+            href="https://github.com/levente-murgas/levente-murgas.github.io/blob/main/final_assignment.ipynb"
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
@@ -121,7 +121,7 @@ export function Header({ links }: { links: NavLink[] }) {
               </a>
             ))}
             <a
-              href="https://github.com/levente-murgas/levente-murgas.github.io/blob/main/eda.ipynb"
+              href="https://github.com/levente-murgas/levente-murgas.github.io/blob/main/final_assignment.ipynb"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
