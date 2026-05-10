@@ -4,3 +4,13 @@ dist/
 *.local
 src/App.css
 src/assets/
+
+# macOS
+**/.DS_Store
+
+# Large raw datasets (too big for git — obtain from original sources)
+data/raw/movies_metadata.csv
+data/raw/tvs.csv
+
+# Stale build artifacts in repo root assets/
+assets/
