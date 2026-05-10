@@ -73,6 +73,17 @@ export function Header({ links }: { links: NavLink[] }) {
               {link.label}
             </a>
           ))}
+          <a
+            href="https://github.com/levente-murgas/levente-murgas.github.io/blob/main/eda.ipynb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              buttonVariants({ variant: 'outline', size: 'sm' }),
+              'ml-2 border-[#E50914] text-[#E50914] hover:bg-[#E50914] hover:text-white cursor-pointer'
+            )}
+          >
+            View Notebook
+          </a>
         </div>
 
         <Button
@@ -109,6 +120,17 @@ export function Header({ links }: { links: NavLink[] }) {
                 {link.label}
               </a>
             ))}
+            <a
+              href="https://github.com/levente-murgas/levente-murgas.github.io/blob/main/eda.ipynb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({ variant: 'outline', className: 'justify-start' }),
+                'border-[#E50914] text-[#E50914] hover:bg-[#E50914] hover:text-white cursor-pointer'
+              )}
+            >
+              View Notebook
+            </a>
           </div>
         </div>
       </div>
