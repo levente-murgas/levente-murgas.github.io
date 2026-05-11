@@ -177,10 +177,25 @@ const references = [
 ];
 
 const contributions = [
-  { name: 'Lucas Patricio Martin Campopiano', id: 's250484', sections: 'Data cleaning, merging, and EDA' },
-  { name: 'Levente Murgás', id: 's242957', sections: 'Figure 1 — The Explosion, website development' },
-  { name: 'Kostas Papadopoulos', id: 's250219', sections: 'Genre and content rating analysis' },
+  {
+    name: 'Lucas Patricio Martin Campopiano',
+    id: 's250484',
+    items: ['Design of the outline of all figures shown', 'Code and Analysis of Figure 3'],
+  },
+  {
+    name: 'Levente Murgás',
+    id: 's242957',
+    items: ['Website development', 'Dataset merging and preprocessing', 'Code and Analysis of Figure 1'],
+  },
+  {
+    name: 'Konstantinos Papadopoulos',
+    id: 's250219',
+    items: ['Code and Analysis of Figure 2', 'Code and Analysis of Figure 4'],
+  },
 ];
+
+const contributionCriteria =
+  'The criteria we used for splitting workload depended on the amount of cumulative workload necessary for each person, because we wanted to distribute everything fairly. Additionally, every member is aware of and has contributed to others\u2019 tasks.';
 
 function App() {
   return (
@@ -215,16 +230,23 @@ function App() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 pb-20">
         <div className="border-t border-[#333] pt-10">
           <h3 className="text-white text-lg md:text-2xl font-bold mb-6">Contributions</h3>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {contributions.map((c) => (
-              <div key={c.id} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-                <span className="text-white text-sm md:text-base font-medium">
+              <div key={c.id}>
+                <p className="text-white text-sm md:text-base font-medium mb-1">
                   {c.name} <span className="text-[#666] font-normal">({c.id})</span>
-                </span>
-                <span className="text-[#555] hidden sm:inline">—</span>
-                <span className="text-[#A0A0A0] text-sm md:text-base">{c.sections}</span>
+                </p>
+                <ul className="list-disc list-inside space-y-0.5">
+                  {c.items.map((item) => (
+                    <li key={item} className="text-[#A0A0A0] text-sm md:text-base">{item}</li>
+                  ))}
+                </ul>
               </div>
             ))}
+            <div className="pt-2">
+              <p className="text-white text-sm md:text-base font-medium mb-1">Criteria</p>
+              <p className="text-[#A0A0A0] text-sm md:text-base">{contributionCriteria}</p>
+            </div>
           </div>
         </div>
       </div>
